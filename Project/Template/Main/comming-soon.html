@@ -1,0 +1,127 @@
+<!doctype html>
+<!--[if lt IE 7]>		<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="zxx"> <![endif]-->
+<!--[if IE 7]>			<html class="no-js lt-ie9 lt-ie8" lang="zxx"> <![endif]-->
+<!--[if IE 8]>			<html class="no-js lt-ie9" lang="zxx"> <![endif]-->
+<!--[if gt IE 8]><!-->	<html class="no-js" lang="zxx"> <!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Soccer BootStrap HTML5 CSS3 Theme</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" href="../Soccer-and-Football-Club-Template/apple-touch-icon.png">
+	<link rel="stylesheet" href="../Soccer-and-Football-Club-Template/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../Soccer-and-Football-Club-Template/css/normalize.css">
+	<link rel="stylesheet" href="../Soccer-and-Football-Club-Template/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../Soccer-and-Football-Club-Template/css/transitions.css">
+	<link rel="stylesheet" href="../Soccer-and-Football-Club-Template/css/prettyPhoto.css">
+	<link rel="stylesheet" href="../Soccer-and-Football-Club-Template/css/swiper.min.css">
+	<link rel="stylesheet" href="../Soccer-and-Football-Club-Template/css/jquery-ui.css">
+	<link rel="stylesheet" href="../Soccer-and-Football-Club-Template/css/animate.css">
+	<link rel="stylesheet" href="../Soccer-and-Football-Club-Template/css/owl.theme.css">
+	<link rel="stylesheet" href="../Soccer-and-Football-Club-Template/css/owl.carousel.css">
+	<link rel="stylesheet" href="../Soccer-and-Football-Club-Template/css/customScrollbar.css">
+	<link rel="stylesheet" href="../Soccer-and-Football-Club-Template/css/icomoon.css">
+	<link rel="stylesheet" href="../Soccer-and-Football-Club-Template/css/main.css">
+	<link rel="stylesheet" href="../Soccer-and-Football-Club-Template/css/color.css">
+	<link rel="stylesheet" href="../Soccer-and-Football-Club-Template/css/responsive.css">
+	<script src="../Soccer-and-Football-Club-Template/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+<body class="tg-comming-soon">
+	<!--[if lt IE 8]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+	<!--************************************
+			Wrapper Start
+	*************************************-->
+	<div id="tg-wrapper" class="tg-wrapper tg-haslayout">
+		<!--************************************
+				Main Start
+		*************************************-->
+		<main id="tg-main" class="tg-main tg-haslayout">
+			<div class="tg-comming-sooncontent">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8 col-sm-12">
+							<div id="tg-comming-sooncounter" class="tg-comming-sooncounter">
+								<div id="days" class="timer_box"></div>
+								<div id="hours" class="timer_box"></div>
+								<div id="minutes" class="timer_box"></div>
+								<div id="seconds" class="timer_box"></div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-12">
+							<div class="tg-404-content">
+								<div class="tg-section-heading"><h2>oops! something went wrong. page not found.</h2></div>
+								<div class="tg-description">
+									<p>Consectetur adipisicing elit sed do eiusmod temport incididunt utia labore et dolore magna aliqua enima ad minim veniam quistrud on ullamco laboris nisiut aliquip ex ea commodo consequat.</p>
+								</div>
+								<form class="tg-searcharea">
+									<fieldset>
+										<div class="form-group">
+											<input type="email" placeholder="Email">
+										</div>
+										<button type="submit" class="tg-btn">signup</button>
+									</fieldset>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!--************************************
+				Main End
+		*************************************-->
+	</div>
+	<!--************************************
+			Wrapper End
+	*************************************-->
+	<script src="../Soccer-and-Football-Club-Template/js/vendor/jquery-library.js"></script>
+	<script src="../Soccer-and-Football-Club-Template/js/vendor/bootstrap.min.js"></script>
+	<script src="../Soccer-and-Football-Club-Template/js/customScrollbar.min.js"></script>
+	<script src="../Soccer-and-Football-Club-Template/js/owl.carousel.js"></script>
+	<script src="../Soccer-and-Football-Club-Template/js/isotope.pkgd.js"></script>
+	<script src="../Soccer-and-Football-Club-Template/js/prettyPhoto.js"></script>
+	<script src="../Soccer-and-Football-Club-Template/js/swiper.min.js"></script>
+	<script src="../Soccer-and-Football-Club-Template/js/jquery-ui.js"></script>
+	<script src="../Soccer-and-Football-Club-Template/js/countTo.js"></script>
+	<script src="../Soccer-and-Football-Club-Template/js/appear.js"></script>
+	<script src="../Soccer-and-Football-Club-Template/js/main.js"></script>
+	<script>
+		(function($) {
+			var launch = new Date(2017, 06, 14, 11, 15);
+			var days = $('#days');
+			var hours = $('#hours');
+			var minutes = $('#minutes');
+			var seconds = $('#seconds');
+			setDate();
+			function setDate(){
+				var now = new Date();
+				if( launch < now ){
+					days.html('<p>Days</p><h1>0</h1>');
+					hours.html('<p>hrs</p><h1>0</h1>');
+					minutes.html('<p>Min</p><h1>0</h1>');
+					seconds.html('<p>Sec</p><h1>0</h1>');
+				}
+				else{
+					var s = -now.getTimezoneOffset()*60 + (launch.getTime() - now.getTime())/1000;
+					var d = Math.floor(s/86400);
+					days.html('<h1>'+d+'</h1><p>Day'+(d>1?'s':''),'</p>');
+					s -= d*86400;
+					var h = Math.floor(s/3600);
+					hours.html('<h1>'+h+'</h1><p>Hour'+(h>1?'s':''),'</p>');
+					s -= h*3600;
+					var m = Math.floor(s/60);
+					minutes.html('<h1>'+m+'</h1><p>Minute'+(m>1?'s':''),'</p>');
+					s = Math.floor(s-m*60);
+					seconds.html('<h1>'+s+'</h1><p>Second'+(s>1?'s':''),'</p>');
+					setTimeout(setDate, 1000);
+				}
+			}
+		})(jQuery);
+	</script>
+</body>
+
+</html>
